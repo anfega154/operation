@@ -1,12 +1,12 @@
 package com.quasar.operation;
 
-import com.quasar.operation.aplication.usecase.DeterminemessageAndLocation;
+import com.quasar.operation.aplication.usecase.DetermineMessageAndLocation;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.awt.*;
 
-import static com.quasar.operation.aplication.usecase.DeterminemessageAndLocation.execute;
+import static com.quasar.operation.aplication.usecase.DetermineMessageAndLocation.execute;
 
 @SpringBootApplication
 public class OperationApplication {
@@ -22,7 +22,7 @@ public class OperationApplication {
 				{"", "", "", "mensaje", "secreto"}
 		};
 
-		DeterminemessageAndLocation.DeterminationResult result = execute(distances, messages);
+		DetermineMessageAndLocation.DeterminationResult result = execute(distances, messages);
 
 		Point location = result.getLocation();
 		String message = result.getMessage();

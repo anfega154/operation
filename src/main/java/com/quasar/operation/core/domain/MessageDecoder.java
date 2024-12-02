@@ -15,16 +15,17 @@ public class MessageDecoder {
             maxLength = Math.max(maxLength, message.length);
         }
 
-        String[] result = new String[maxLength];
+        StringBuilder result = new StringBuilder();
 
-        for (String[] satelliteMessage : messages) {
-            for (int i = 0; i < satelliteMessage.length; i++) {
-                if (satelliteMessage[i] != null && !satelliteMessage[i].isEmpty()) {
-                    result[i] = satelliteMessage[i];
+        for (int i = 0; i < maxLength; i++) {
+            for (String[] satelliteMessage : messages) {
+                if (i < satelliteMessage.length && satelliteMessage[i] != null && !satelliteMessage[i].isEmpty()) {
+                    result.append(satelliteMessage[i]).append(" ");
+                    break;
                 }
             }
         }
 
-        return String.join(" ", result).trim();
+        return result.toString().trim();
     }
 }

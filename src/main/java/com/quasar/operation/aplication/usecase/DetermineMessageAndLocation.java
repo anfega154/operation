@@ -5,7 +5,7 @@ import com.quasar.operation.core.domain.MessageDecoder;
 
 import java.awt.*;
 
-public class DeterminemessageAndLocation {
+public class DetermineMessageAndLocation {
 
 
     public static DeterminationResult execute(double[] distances, String[][] messages) {
