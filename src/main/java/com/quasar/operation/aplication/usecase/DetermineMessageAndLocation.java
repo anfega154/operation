@@ -2,13 +2,17 @@ package com.quasar.operation.aplication.usecase;
 
 import com.quasar.operation.core.domain.LocationCalculator;
 import com.quasar.operation.core.domain.MessageDecoder;
-
+import com.quasar.operation.core.domain.models.Satellite;
+import java.util.List;
 import java.awt.*;
 
 public class DetermineMessageAndLocation {
 
 
-    public static DeterminationResult execute(double[] distances, String[][] messages) {
+    public static DeterminationResult execute(List<Satellite> satellites) {
+        double[] distances = satellites.stream().mapToDouble(Satellite::getDistance).toArray();
+        String[][] messages = satellites.stream().map(Satellite::getMessage).map(list -> list.toArray(new String[0])).toArray(String[][]::new);
+
         Point location = LocationCalculator.getLocation(distances);
         String message = MessageDecoder.decodeMessage(messages);
 
