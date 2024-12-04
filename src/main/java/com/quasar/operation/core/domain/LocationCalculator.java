@@ -1,6 +1,6 @@
 package com.quasar.operation.core.domain;
 
-import com.quasar.operation.helpers.LocalizationHelper;
+import com.quasar.operation.utils.LocalizationHelper;
 
 import java.awt.*;
 
