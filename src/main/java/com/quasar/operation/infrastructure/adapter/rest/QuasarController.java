@@ -1,7 +1,6 @@
 package com.quasar.operation.infrastructure.adapter.rest;
 
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.quasar.operation.aplication.dto.SatelliteSplitRequest;
 import com.quasar.operation.aplication.usecase.DetermineMessageAndLocation;
 import com.quasar.operation.aplication.dto.Response;
@@ -15,8 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
 
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 import static com.quasar.operation.aplication.usecase.DetermineMessageAndLocation.execute;
 
