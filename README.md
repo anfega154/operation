@@ -57,7 +57,7 @@ Cuerpo de la solicitud:
 Respuesta (200 OK):
 ```json
 {
-  "position": { "x": -100.0, "y": 75.5 },
+  "position": { "x": -487.0, "y": 1557.0 },
   "message": "este es un mensaje secreto"
 }
 ```
@@ -88,7 +88,7 @@ Respuesta (200 OK):
 
 ```json
 {
-  "position": { "x": -100.0, "y": 75.5 },
+  "position": { "x": -487.0, "y": 1557.0 },
   "message": "este es un mensaje secreto"
 }
 ```
