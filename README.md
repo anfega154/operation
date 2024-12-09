@@ -10,7 +10,6 @@ Este proyecto implementa un sistema para recibir información de satélites, det
 ## Tecnologías
 
 - **Spring Boot**: Framework principal para la creación de servicios REST.
-- **Swagger**: Para generar la documentación de la API.
 - **JUnit 5**: Para pruebas unitarias.
 - **Mockito**: Para pruebas unitarias con mocks.
 
